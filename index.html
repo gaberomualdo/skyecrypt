@@ -12,6 +12,9 @@
   <link href="https:/fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
 </head>
 <body>
+  <nav>
+    
+  </nav>
   <div class="container">
     <section class="labels">
       <h1 class="left">input</h1>
@@ -40,7 +43,7 @@
           <p>Shift:</p><input type="number" value="4" max="26" min="0" oninput="checkCaesarShift(this);updateCipher();">
         </div>
         <div class="row vigenere_keyword" style="display: none;">
-          <p>Keyword:</p><input type="text" oninput="checkVigenereKeyword(this);updateCipher();" spellcheck="false">
+          <p>Keyword:</p><input value="skyecrypt" type="text" oninput="checkVigenereKeyword(this);updateCipher();" spellcheck="false">
         </div>
       </div>
       <div class="divider">

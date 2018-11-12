@@ -1,2 +1,2 @@
-# skyecrypt
-A set of simple ciphers online.
+# SkyeCrypt
+Online encoding and encryption of famous ciphers.

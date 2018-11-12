@@ -9,6 +9,38 @@ body {
   background-color: #fff;
   overflow: hidden;
 }
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 950px;
+  height: 4rem;
+  padding: 0 calc(((100vw - 850px) / 2));
+  border-bottom: 2px solid #ccc;
+  cursor: default;
+}
+nav h1 {
+  float: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: calc(4rem - 4px);
+}
+nav p {
+  float: left;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  padding-top: 1.625rem;
+  color: #999;
+  margin-left: .5rem;
+  font-weight: normal;
+}
+@media (max-width: 950px){
+  nav {
+    padding: 0 50px;
+  }
+}
 div.container {
   border-top: none;
   border-bottom: none;

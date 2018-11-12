@@ -1,5 +1,144 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans KR";
+  font-family: "Droid Sans Mono";
+  color: #222;
+}
+body {
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+div.container {
+  border-top: none;
+  border-bottom: none;
+  min-height: 100vh;
+  width: 950px;
+  padding: calc((100vh - 350px) / 2) 50px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: left;
+}
+div.col, div.divider {
+  display: block;
+  float: left;
+}
+div.col {
+  width: 250px;
+  border: none;
+  border: 2px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  height: 250px;
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+div.col:focus {
+  border-color: #222;
+}
+div.col.middle button, div.col.middle select{
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+}
+div.col.middle ul.mode {
+  display: block;
+  overflow: auto;
+}
+div.col.middle ul.mode button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  color: #999;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+div.col.middle ul.mode button.active {
+  color: #222;
+}
+div.col.middle select, div.col.middle input {
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.875rem;
+  width: 100%;
+  display: block;
+  outline: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  border: 2px solid #ccc;
+  margin-top: 15px;
+}
+div.col.middle div.row {
+  margin-top: 15px;
+  overflow: auto;
+}
+div.col.middle div.row p {
+  width: calc(100% - 135px);
+  display: block;
+  float: left;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  padding-right: 0.5rem;
+  text-align: right;
+}
+div.col.middle input {
+  width: 135px;
+  display: block;
+  float: left;
+  margin: 0;
+  text-transform: uppercase;
+}
+div.col.middle select:focus, div.col.middle input:focus {
+  border-color: #222;
+}
+div.divider {
+  width: 50px;
+  height: 50px;
+  margin-top: 95px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+div.divider svg {
+  width: 100%;
+  fill: #222;
+}
+div.col.end {
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+div.col.end span {
+  color: #e00;
+  font-weight: bold;
+}
+section.content {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+section.labels {
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+}
+section.labels h1 {
+  display: block;
+  float: right;
+  line-height: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+}
+section.labels h1.left {
+  float: left;
 }

@@ -9,25 +9,47 @@
   <link rel="stylesheet" href="main.css">
   <link rel="shortcut icon" href="favicon.png">
 
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https:/fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <div class="col" contenteditable="true" tabindex="-1" oninput="updateCipher(this.value);">
+    <section class="labels">
+      <h1 class="left">input</h1>
+      <h1>output</h1>
+    </section>
+    <section class="content">
+      <div class="col input" contenteditable="true" tabindex="-1" oninput="updateCipher();" spellcheck="false"></div>
+      <div class="divider">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+      </div>
+      <div class="col middle">
+        <ul class="mode">
+          <button id="encode" class="active" onclick="changeMode(this);updateCipher();">encode</button
+          ><button id="decode" onclick="changeMode(this);updateCipher();">decode</button>
+        </ul>
+        <select class="cipher" onchange="this.blur();updateCipher();">
+          <option value="Morse Code">Morse Code</option>
+          <option value="Caesar Cipher">Caesar Cipher</option>
+          <option value="ROT13">ROT13</option>
+          <option value="Vigenere Cipher">Vigenere Cipher</option>
+          <option value="NATO Spelling Alphabet">NATO Spelling Alphabet</option>
+          <option value="Base64">Base64</option>
+          <option value="URL Encoding">URL Encoding</option>
+        </select>
+        <div class="row caesar_shift" style="display: none;">
+          <p>Shift:</p><input type="number" value="4" max="26" min="0" oninput="checkCaesarShift(this);updateCipher();">
+        </div>
+        <div class="row vigenere_keyword" style="display: none;">
+          <p>Keyword:</p><input type="text" oninput="checkVigenereKeyword(this);updateCipher();" spellcheck="false">
+        </div>
+      </div>
+      <div class="divider">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+      </div>
+      <div class="col end">
 
-    </div>
-    <div class="divider">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
-    </div>
-    <div class="col middle">
-
-    </div>
-    <div class="divider">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
-    </div>
-    <div class="col end">
-
-    </div>
+      </div>
+    </section>
   </div>
   <script src="ciphers.js"></script>
   <script src="main.js"></script>
